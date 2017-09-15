@@ -3,34 +3,20 @@
    GITHUB FOR CODE, gDRIVE FOR PDFS AND BOOKS 
 *************************************************
 
-
-*************************************************
-   AVOID CONFLICTS AND CONFUSION 
-*************************************************
-
-* actual code lives in at least one client: github client (MAC) or citc and github client (GRAIL)
-
-* e.g. g3_golang/ is working dir (both on Mac and Grail), pull from and push to github always in that dir.
-* Github to have latest at EOB each day.
-* Before working in that dir, be it on Mac or Grail, pull latest.  
-* Mac GOPATHs in .bash_profile are: export GOPATH="$HOME/work/g3_golang:$HOME/work/go"
-
-citc client on Grail is "training". Syncs to experimental../../g3_golang
-
 Once changes ocurred on 
   Mac changed:
-    push up to Github
+    push to Github
     pull down to Grail
-    push up CL to experimental
+    push CL to experimental
     
   Grail changed: 
-    push up CL to experimental
-    push up to Github
+    push CL to experimental
+    push to Github
     pull down to Mac
     
   Github changed:
     pull down to Grail
-    push up CL to experimental
+    push CL to experimental
     pull down to Mac
 
 *************************************************
