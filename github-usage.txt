@@ -46,16 +46,12 @@ git merge origin/master --allow-unrelated-histories # in case there are files an
 
 1. Download entire GitHub:
 
-1.1. Linux 
 USER=salmonofdoubt; PAGE=1
 
 curl "https://api.github.com/users/$USER/repos?page=$PAGE&per_page=100" |
   grep -e 'git_url*' |
   cut -d \" -f 4 |
   xargs -L1 git clone
-
-1.2. MAC
-USER=salmonofdoubt; curl "https://api.github.com/users/$USER/repos?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
 
 2. In !!!each!!! respective (local) repo
 - git init
