@@ -1,90 +1,51 @@
-
-*************************************************
    GITHUB FOR CODE, gDRIVE FOR PDFS AND BOOKS 
-*************************************************
+   IMPORTANT 2B COPIED TO CITC > EXP 
 
-Once changes ocurred on 
-  Mac changed:
-    push to Github
-    pull down to Grail
-    push CL to experimental
-    
-  Grail changed: 
-    push CL to experimental
-    push to Github
-    pull down to Mac
-    
-  Github changed:
-    pull down to Grail
-    push CL to experimental
-    pull down to Mac
+******************************************************
+      WORK WITH REPOS
+******************************************************
 
-*************************************************
-   GITHUB USAGE
-*************************************************
-# github >> code storage, share, VCS Version Control System.
-See Bitkeeper (not free)
------------------------------
-go get -u github.com/goestoeleven/golantraining
-git help git
-------------------------
-git init 
-------------------------
-git status
-------------------------
-Create new repo in Github XY
-In local directory $XY: 
-git remote add origin https://github.com/salmonofdoubt/XY.git
-git push --set-upstream origin master
-------------------------
-git add <path/file to be added to client>
-git add .   # adds everything to client, and therefore to remote on git commit and push
+0: REPO is the smallest unit that changes, not a single file or dir
 
-git pull                              # everything from remote
+1: Name local working dir the same as remote 
+   if remote REPO does not yet exist {
+      Create a new repo in Github with README.MD}
+     
+2: cd into your local REPO (.git may or may not exist)
+
+$ ls -last
+ .git
+ stuff
+
+------------------------------------------------------
+If local is not yet initialised: 
+$ git init 
+$ git pull <remote *entire* repo> ..........(repo with all subdirs)
+$ git remote add origin <repo>
+------------------------------------------------------
+
+$ git status
+$ git pull 
+$ git pull origin master ...................(in case local is confused)
+
+< work existing file, create new file, new dir/file >
+
+$ git push
+$ git push --set-upstream origin master ....(in case there is no branch yet))
+$ git commit
+$ git status
+   On branch master
+   ...
+
 git pull --allow-unrelated-histories  # in case 
-
 git merge origin/master --allow-unrelated-histories # in case there are files and folders upstream already
                                                     
-------------------------
-git rm <path/file to be removed from client>
-git rm --all
-------------------------
-git commit 
-git commit -m "message"
-------------------------
-git push
-git push -u origin master
+******************************************************
+      MISC 
+******************************************************
+
 git push -u origin master --force
 
-Download entire GitHub
-————————————————————————
+Download entire GitHub:
 USER=salmonofdoubt; curl "https://api.github.com/users/$USER/repos?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
-
-
-*************************************************
-Quick setup — if you’ve done this kind of thing before
-*************************************************
- Set up in Desktop	or	
- HTTPS
- SSH
-e.g.
-https://github.com/salmonofdoubt/Chords.git
-
-We recommend every repository include a README, LICENSE, and .gitignore.
-…or create a new repository on the command line
-
-echo "# Chords" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/salmonofdoubt/Chords.git
-git push -u origin master
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/salmonofdoubt/Chords.git
-git push -u origin master
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
-
-Import code
 
