@@ -1,12 +1,35 @@
-   Github for code
-   gDRIVE for pdf and books 
-   g3 for important (copy to citc check into exp
+Github -> for code
+gDRIVE -> for pdf and books 
+g3     -> important (copy to citc check into exp
+Public keys -> ssh-keygen -t rsa -b 4096 -C https://api.github.com/users/salmonofdoubt/events/public
    
-   ssh-keygen -t rsa -b 4096 -C https://api.github.com/users/salmonofdoubt/events/public
-   
-   "your_email@example.com"
-   
-   https://api.github.com/users/salmonofdoubt/events/public
+******************************************************
+      BEST TO WORK WITH ENTIRE GITHUB REPOS 
+******************************************************
+
+1. Download entire GitHub:
+
+USER=salmonofdoubt; PAGE=1
+
+curl "https://api.github.com/users/$USER/repos?page=$PAGE&per_page=100" |
+  grep -e 'git_url*' |
+  cut -d \" -f 4 |
+  xargs -L1 git clone
+
+2. In !!!each!!! respective (local) repo
+- git init
+- git pull origin master (so each dir is defo mapped to the specific remote repo)
+
+3. Work in / from each individual repo after this. 
+
+
+git remote -v
+origin  https://github.com/salmonofdoubt/TECH/tree/master/PROG/ (fetch)
+origin  https://github.com/salmonofdoubt/TECH/tree/master/PROG/ (push)
+
+git remote add upstream https://github.com/salmonofdoubt/TECH/tree/master/PROG/java-lynda
+
+https://api.github.com/users/salmonofdoubt/events/public
    
 -> REPO is the smallest unit that changes, not a single file or dir
 -> Name local working dir the same as remote 
@@ -44,24 +67,6 @@ $ git status
 git pull --allow-unrelated-histories  # in case 
 git merge origin/master --allow-unrelated-histories # in case there are files and folders upstream already
                                                     
-******************************************************
-      WORK WITH ENTIRE GITHUB REPOS 
-******************************************************
-
-1. Download entire GitHub:
-
-USER=salmonofdoubt; PAGE=1
-
-curl "https://api.github.com/users/$USER/repos?page=$PAGE&per_page=100" |
-  grep -e 'git_url*' |
-  cut -d \" -f 4 |
-  xargs -L1 git clone
-
-2. In !!!each!!! respective (local) repo
-- git init
-- git pull origin master (so each dir is defo mapped to the specific remote repo)
-
-3. Work in / from each individual repo after this. 
 
 
 
