@@ -1,27 +1,31 @@
-   GITHUB FOR CODE, gDRIVE FOR PDFS AND BOOKS 
-   IMPORTANT 2B COPIED TO CITC > EXP 
-
-******************************************************
-      WORK WITH REPOS
-******************************************************
-
-0: REPO is the smallest unit that changes, not a single file or dir
-
-1: Name local working dir the same as remote 
-   if remote REPO does not yet exist {
-      Create a new repo in Github with README.MD}
-     
-2: cd into your local REPO (.git may or may not exist)
-
-$ ls -last
- .git
- stuff
-
-------------------------------------------------------
-If local is not yet initialised: 
-$ git init 
-$ git pull <remote *entire* repo> ..........(repo with all subdirs)
-$ git remote add origin <repo>
+   Github for code
+   gDRIVE for pdf and books 
+   g3 for important (copy to citc check into exp
+   
+   ssh-keygen -t rsa -b 4096 -C https://api.github.com/users/salmonofdoubt/events/public
+   
+   "your_email@example.com"
+   
+   https://api.github.com/users/salmonofdoubt/events/public
+   
+-> REPO is the smallest unit that changes, not a single file or dir
+-> Name local working dir the same as remote 
+      If remote REPO does not yet exist, create a repo in Github, incl README.MD
+-> cd into local REPO, .git may or may not exist
+      $ ls -last
+         .git  foo
+-> If git is not yet initialised here: 
+      $ git init 
+      $ git status
+         foo
+      $ git remote show origin
+      $ git pull https://github.com/salmonofdoubt/TECH/PROG
+      $ git remote add origin https://github.com/salmonofdoubt/TECH/tree/master/PROG/java-lynda  (the remote_repo_url)
+      
+      git remote add origin git@github.com:salmonofdoubt/TECH/tree/master/PROG/java-lynda
+      git diff
+      git log
+      
 ------------------------------------------------------
 
 $ git status
