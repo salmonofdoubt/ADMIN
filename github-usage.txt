@@ -23,6 +23,9 @@ curl "https://api.github.com/users/$USER/repos?page=$PAGE&per_page=100" |
 3. Work in / from each individual repo after this. 
 
 
+git reset --hard
+git pull
+
 git remote -v
 origin  https://github.com/salmonofdoubt/TECH/tree/master/PROG/ (fetch)
 origin  https://github.com/salmonofdoubt/TECH/tree/master/PROG/ (push)
