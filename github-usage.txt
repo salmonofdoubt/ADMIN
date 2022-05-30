@@ -2,10 +2,24 @@ Github -> for code
 gDRIVE -> for pdf and books 
 g3     -> important (copy to citc check into exp
 Public keys -> ssh-keygen -t rsa -b 4096 -C https://api.github.com/users/salmonofdoubt/events/public
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RECOMMENDED SETUP
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Create target dir on Mac
+Install Visual Code
+In VC, clone Git repos into the taget dir 
+
+To sync, in taget dir make sure 
+$ git config --list --show-origin
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
    
-******************************************************
-      BEST TO WORK WITH ENTIRE GITHUB REPOS 
-******************************************************
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      WORK WITH ENTIRE GITHUB REPOS 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Download entire GitHub:
 
